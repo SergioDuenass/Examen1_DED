@@ -270,6 +270,18 @@ void examen04()
 
   /* ------------------- INICIA RESPUESTA   ------------------ */
   int *ptr_arreglo = arreglo;
+  char *ptr_char = las_letras;
+
+// Utilizaré los 2 métodos 
+  *ptr_arreglo = 30;
+  *(ptr_arreglo + 1) = 50;
+  *(ptr_arreglo + 2) = 99;
+
+  *ptr_char = 'z';
+  ptr_char++;
+  *ptr_char = 'x';
+  ptr_char++;
+  *ptr_char = 'y';
   /* ------------------- FIN RESPUESTA   ------------------ */
   
   for(int i = 0; i < 3; i++)
