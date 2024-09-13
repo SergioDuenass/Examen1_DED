@@ -133,6 +133,21 @@ int examen01()
 /* ------------------- INICIO RESPUESTA   ------------------ */
 //Para la función.
 
+void ej02(float *grados, char *tipo) {
+    if (*tipo == 'C') {
+        // C A F
+        *grados = (*grados * 9 / 5) + 32;
+        *tipo = 'F';  
+    } else if (*tipo == 'F') {
+        // F A C
+        *grados = (*grados - 32) * 5 / 9;
+        *tipo = 'C'; 
+    } else {
+        // CUANDO NO ES VÁLIDO
+        printf("TIPO NO VÁLIDOt.\n");
+    }
+}
+
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 
@@ -145,6 +160,7 @@ int examen02()
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
   //covertir_temp(?,?);
+  ej02(&grados, &tipo);
   /* ------------------- FIN DE RESPUESTA   ------------------ */
   
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
