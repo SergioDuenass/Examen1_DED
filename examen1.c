@@ -27,16 +27,16 @@ Alumno: SERGIO DANIEL DUEÑAS GODINEZ
     El tamaño de un apuntador es el mismo para cualquier tipo de dato, ya que lo que almacena es la dirección de memoria, no el valor en sí.
       
   2: Cuando se declara un apuntador, por qué es necesario declarar también el tipo de dato al que apunta?
-    R:
+    R: Para saber saber cuántos bytes debe de leer o escribir en la dirección de memoria que almacena el apuntador.
 
   3: Cuál es la diferencia entre pasar por valor y pasar por referencia?
-    R:   
+    R:  Pasar por valor es cuando le das una copia del valor, mientras que por referencia, le das la dirección de memoria del valor.
 
   4: Qué es necesario hacer para acceder a los datos de una variable de tipo void *?
-    R:
+    R: Castearlo al tipo de dato cual quieras el resultado.
 
   5: Cómo se recomienda inicializar un apuntador, y por qué es importante esta práctica?
-    R:
+    R: Inicializarlo como NULL, ya que si no hacemos esto, el apuntador puede referenciar a algo random y causar errores en el programa.
 
 */
 
