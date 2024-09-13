@@ -172,6 +172,7 @@ int examen02()
 
   /* ------------------- INICIO RESPUESTA   ------------------ */
   //covertir_temp(?,?);
+  ej02(&grados, &tipo);
   /* ------------------- FIN DE RESPUESTA   ------------------ */
 
   printf("Que equivale a: %.2f °%c\n", grados, tipo);
@@ -236,7 +237,15 @@ int escribe_doble(int *num, char letra)
 
 /* Declara tus punteros a funcion aqui: */
 /* ------------------- INICIO RESPUESTA   ------------------ */
+typedef void (*ptr_cuadrado)(int *); // TOMA INT RETORNA VOID 
 
+typedef int (*ptr_triplica)(int *); // TOMA INT RETOBANA INT
+
+typedef char *(*ptr_convierte)(int *, char **); // TOMA INT Y CHAR** RETORNA CHAR*
+
+typedef int (*ptr_duplica)(int *); // TOMA INT RETORNA INT
+
+typedef int (*ptr_escribe_doble)(int *, char); // TOMA INT Y CHAR RETORNA INT
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
 /* Fin ejercicio 03 */
@@ -260,7 +269,7 @@ void examen04()
   char las_letras[3] = {/*No vale inicializar aqui */};
 
   /* ------------------- INICIA RESPUESTA   ------------------ */
-
+  int *ptr_arreglo = arreglo;
   /* ------------------- FIN RESPUESTA   ------------------ */
   
   for(int i = 0; i < 3; i++)
