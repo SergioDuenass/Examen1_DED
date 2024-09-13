@@ -1,7 +1,7 @@
 /*  
 
 
-Alumno: _________________
+Alumno: SERGIO DANIEL DUEÑAS GODINEZ
     Fecha : 13 de Septiembre 2024
     Diseno de Estructura de Datos - Grupo B
     Primer Parcial "Apuntadores" 
@@ -23,7 +23,8 @@ Alumno: _________________
     ============================================================
 
   1: Describe qué es un apuntador y cuál es su tamaño (no importa tanto el número bytes, sino la teoria detras del tamaño)
-    R:
+    R:  Un apuntador es una variable donde en lugar de almacenar un valor, se almacena la dirección de memoria de otro valor, o también llamado referencia.
+    El tamaño de un apuntador es el mismo para cualquier tipo de dato, ya que lo que almacena es la dirección de memoria, no el valor en sí.
       
   2: Cuando se declara un apuntador, por qué es necesario declarar también el tipo de dato al que apunta?
     R:
