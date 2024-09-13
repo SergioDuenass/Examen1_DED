@@ -308,8 +308,16 @@ void examen04()
   Parte 3: Comprueba su funcionamiento en examen05()
 */
 /* ------------------- RESPUESTA   ------------------ */
-// Declara tu función aquí
+// Parte 1
+typedef struct {
+  int numero;
+  char letra;
+} StructMultCondicional;
 
+// Declara tu función aquí
+int mult_condicional(void *estructura, int numero) {
+  StructMultCondicional *ptr_struct = estructura;
+  if 
 
 int examen05()
 {
