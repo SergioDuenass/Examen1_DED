@@ -64,7 +64,22 @@ Pruebe que su programa funcione con los ejemplos programados
 */
 /*------------------- INICIO RESPUESTA   ------------------ */
  
-   
+ void ej01(char *palabra)
+ {
+   char *ptr_palabra = palabra;
+    while(*ptr_palabra != '\0')
+    {
+      if(*ptr_palabra % 2 == 0)
+      {
+        *ptr_palabra = *ptr_palabra - 2;
+      }
+      else
+      {
+        *ptr_palabra = *ptr_palabra + 1;
+      }
+      ptr_palabra++;
+    }
+ }
 
 /* ------------------- FIN DE RESPUESTA   ------------------ */
 
@@ -75,7 +90,7 @@ int examen01()
   // INICIO RESPUESTA
     //Llama tu funcion aqui, pruebala con la variable secreto.
     //Prueba con mas cadenas para garantizar su funcionamiento.
-  
+  ej01(secreto);
   // FIN DE RESPUESTA
   
   printf("%s", secreto);
@@ -170,7 +185,7 @@ void cuadrado(int *num)
 int triplica (int *num)
 {
   *num = (*num + *num + *num);
-  return;
+  return 0; // ACUERDA DE QUITAR ESTO
 }
 
 char * convierte(int *ascii, char ** modificador)
