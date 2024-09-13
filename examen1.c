@@ -315,12 +315,21 @@ typedef struct {
 } StructMultCondicional;
 
 // Declara tu función aquí
-int mult_condicional(void *estructura, int numero) {
+int mult_condicional(void *estructura, int numero_2) {
   StructMultCondicional *ptr_struct = estructura;
-  if 
+
+  if (ptr_struct->letra == 'a' || ptr_struct->letra == 'b' || ptr_struct->letra == 'c') {
+    return 0;
+  } else {
+    return ptr_struct->numero * numero_2;
+  }
+}
 
 int examen05()
 {
+  StructMultCondicional estructura1 = {2, 'a'};
+
+  printf("Prueba (debe dar 0 pq puse a): %d\n", mult_condicional(&estructura1, 5));
 
   return 0;
 }
