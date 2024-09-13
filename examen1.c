@@ -64,20 +64,34 @@ Pruebe que su programa funcione con los ejemplos programados
 */
 /*------------------- INICIO RESPUESTA   ------------------ */
  
- void ej01(char *palabra)
- {
-   char *ptr_palabra = palabra;
-    while(*ptr_palabra != '\0')
-    {
-      if(*ptr_palabra % 2 == 0)
-      {
-        *ptr_palabra = *ptr_palabra - 2;
-      }
-      else
-      {
-        *ptr_palabra = *ptr_palabra + 1;
-      }
-      ptr_palabra++;
+void ej01(char *palabra)
+  {
+    char *ptr_palabra = palabra;
+    int i = 1; // vamos a inicializar un iterador para saber en que letra estamos.
+     while (*ptr_palabra != '\0') {
+         if (i % 2 != 0) { // ESTE IF ES PARA VER SI ES NON Y SI ESTÁ EN LA LETRA Z SE CAMBIA A "A"
+             if (*ptr_palabra == 'z') {
+                 *ptr_palabra = 'a';
+             } else if (*ptr_palabra == 'Z') {
+                 *ptr_palabra = 'A';
+             } else {
+                 *ptr_palabra = *ptr_palabra + 1;
+             }
+          } else { // ESTE IF ES PARA VER SI ES PAR Y EN CASOS ESPECIALES COMO LA "B" O LA "A" LOS CAMBIA A "Z" O "Y"
+             if (*ptr_palabra == 'a') {
+                 *ptr_palabra = 'y';
+             } else if (*ptr_palabra == 'b') {
+                 *ptr_palabra = 'z';
+             } else if (*ptr_palabra == 'A') {
+                 *ptr_palabra = 'Y';
+             } else if (*ptr_palabra == 'B') {
+                 *ptr_palabra = 'Z';
+             } else {
+                 *ptr_palabra = *ptr_palabra - 2;
+             }
+         }
+        ptr_palabra++;
+        i++;
     }
  }
 
@@ -185,7 +199,7 @@ void cuadrado(int *num)
 int triplica (int *num)
 {
   *num = (*num + *num + *num);
-  return 0; // ACUERDA DE QUITAR ESTO
+  return * num; // ACUERDA DE QUITAR ESTO
 }
 
 char * convierte(int *ascii, char ** modificador)
